@@ -1,5 +1,7 @@
 import React from 'react'
 
+import cartwidget from '../cartwidget'
+
 export const navbar =() => {
     return (
 <div classname="container">
@@ -15,7 +17,7 @@ export const navbar =() => {
             <a classname="nav_link" href="#">Categoria 2</a>
         </li>
         <li>
-            <a classname="nav_link" href="#">Carrito</a>
+            <a classname="nav_link" href="#">cartwidget</a>
         </li>
     </ul>
 </nav>

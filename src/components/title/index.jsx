@@ -1,11 +1,11 @@
 import React from "react";
 
-export const title =() => {
-    return1 (  
-        <h1> Dr Ariela </h1>
-    
-    )
+
+export const title = (proops) => {
+    console.log(proops);
+    return (
+        <h1>{proops.greeting}</h1>
+    );
 }
 
-
-
+export default title

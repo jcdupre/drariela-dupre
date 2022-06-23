@@ -1,20 +1,17 @@
 import './App.css';
 
+import itemlistcontainer from './components/itemlistcontainer'
 import navbar from './components/navbar'
 
-import title from './components/title'
 
 
 function App() {
   return (
+    <>
     <navbar />
+    <itemlistcontainer />
+    </>
     
-  );
-}
-
-function App() {
-  return (
-    <title />
     
   );
 }
