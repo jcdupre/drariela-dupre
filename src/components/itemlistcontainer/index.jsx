@@ -1,10 +1,10 @@
 import react from "react";
-import title from "../title";
+import Title from "../Title";
 
-export const itemlistcontainer = () => {
+export const ItemListContainer = () => {
     return (
         <title greeting="Juan" />
      )
 }
 
-export default itemlistcontainer;
+export default ItemListContainer;
