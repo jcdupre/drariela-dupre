@@ -21,7 +21,7 @@ export const ItemDetailContainer =() => {
             }, 3000);
         });
 
-        getData.then(res => setData(res.find(services.id === parseInt(detalleId))));
+        getData.then(res => setData(res.find((services) => services.id === parseInt(detalleId))));
     }, [])
 
     return (

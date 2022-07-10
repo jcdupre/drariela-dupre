@@ -1,7 +1,7 @@
-import ItemCount from "../ItemCount";
 import ItemList from "../ItemList";
 import react,{ useEffect, useState } from "react";
 import Title from "../Title";
+
 import { useParams } from 'react-router-dom';
 
 
@@ -30,14 +30,11 @@ getData.then(res => setData(res));
 
     }, [categoriaId])
     
-    const onAdd = (quantity) => {
-        console.log(`Compraste ${quantity} unidades`);
-    }
+    
 
     return (
         <>
         <Title greeting="Dr Ari" />
-        <ItemCount initial={1} stock={5} onAdd={onAdd} />
         <ItemList data={data} />
         </>
         
