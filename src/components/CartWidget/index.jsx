@@ -1,9 +1,12 @@
 import React from "react";
 
 export const CartWidget = () => {
-return (
+
+    return (
+        <>
     <i className="bi bi-cart4"></i>
-)
+    </>
+);
 
 }
 
