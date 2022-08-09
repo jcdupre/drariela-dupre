@@ -5,7 +5,7 @@ import Title from "../Title";
 import { useParams } from 'react-router-dom';
 
 
-export const ItemListContainer = () => {
+export const ItemListContainer = ({ texto }) => {
     const  [data, setData] = useState([]);
 
     const { categoriaId } = useParams();
@@ -16,10 +16,10 @@ export const ItemListContainer = () => {
         if (categoriaId) {
         const queryFilter = query(queryCollection, where('category', '==', categoriaId))
         getDocs(queryFilter)
-            .then(res => setData(res.docs.map(Servicios => ({ id: Servicios.id, ...Servicios.data() }))))
+            .then(res => setData(res.docs.map(servicios => ({ id: servicios.id, ...servicios.data() }))))
         } else {
         getDocs(queryCollection)
-            .then(res => setData(res.docs.map(Servicios => ({ id: Servicios.id, ...Servicios.data() }))))
+            .then(res => setData(res.docs.map(servicios => ({ id: servicios.id, ...servicios.data() }))))
 
         }
 
