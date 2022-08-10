@@ -3,6 +3,7 @@ import { getFirestore, collection, getDocs, query, where } from 'firebase/firest
 import ItemList from "../ItemList";
 import Title from "../Title";
 import { useParams } from 'react-router-dom';
+import 'itemListContainer.css'
 
 
 export const ItemListContainer = ({ texto }) => {
