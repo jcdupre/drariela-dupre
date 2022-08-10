@@ -3,7 +3,6 @@ import { getFirestore, collection, getDocs, query, where } from 'firebase/firest
 import ItemList from "../ItemList";
 import Title from "../Title";
 import { useParams } from 'react-router-dom';
-import 'itemListContainer.css'
 
 
 export const ItemListContainer = ({ texto }) => {
@@ -30,7 +29,6 @@ export const ItemListContainer = ({ texto }) => {
 
     return (
         <>
-        <Title greeting="Dr Ari" />
         <ItemList data={data} />
         </>
         

@@ -19,9 +19,15 @@
 
 .detail__image {
     width: 100%;
+    border: 5px solid var(--color-primary)
 }
 
-.content {
+.content h1 {
+    color: var(--color-primary-variant)
+}
+.content p {
+    color: var(--color-grey);
+    padding-top: 1rem;
     width: 100%;
 }
 
