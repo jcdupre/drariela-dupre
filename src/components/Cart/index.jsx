@@ -1,11 +1,18 @@
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import React from "react";
 import { Link } from 'react-router-dom';
-import { useCartContext } from '../../context/CartContext';
+import { CartContext, useCartContext } from '../../context/CartContext';
 import ItemCart from "../ItemCart";
+import { useContext } from "react";
+import { db } from "../../firebase/config";
+import { useState } from "react";
 
 const Cart = () => {
     const { cart, totalPrice } = useCartContext();
+
+    const {servicios} = useContext(CartContext)
+
+    const [idOrder, setIdOrder] = useState("")
 
     const order = {
         buyer: {
@@ -19,10 +26,13 @@ const Cart = () => {
 
         }
         const handleClick = () => {
-            const db = getFirestore();
-            const ordersCollection = collection(db, 'orders');
-            addDoc(ordersCollection, order)
-            .then(({ id }) => console.log(id))
+            const ordersCollection = collection(db, "orders");
+            addDoc(ordersCollection, {
+                order,
+                items: [{ nombre:"service" }],
+            })
+            .then((result) =>{setIdOrder(result.id)
+            })
     }
     
     
